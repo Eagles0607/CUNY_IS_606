@@ -1,0 +1,23 @@
+---
+title: "Assignment 1: Introduction to Probability"
+author: "Ben Arancibia"
+date: "February 4, 2015"
+output: pdf_document
+---
+
+__**Dobrow Chapter 1**__
+
+1.6
+
+(a) {X + Y = 4} solution: {13, 22, 31}
+
+(b) {X + Y = 9} solution: {45, 36, 63, 54}
+
+(c) {Y = 3} solution (assuming that X value does not matter): {13, 23, 33, 43, 53, 63}
+
+(d) {X = Y} solution: {11, 22, 33, 44, 55, 66}
+
+(e) {X > 2Y} solution: {31, 52}
+
+1.8
+
