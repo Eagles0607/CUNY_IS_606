@@ -7,7 +7,7 @@ output: pdf_document
 
 __**Dobrow Chapter 1**__
 
-1.6
+**1.6**
 
 (a) {X + Y = 4} solution: {13, 22, 31}
 
@@ -19,5 +19,64 @@ __**Dobrow Chapter 1**__
 
 (e) {X > 2Y} solution: {31, 52}
 
-1.8
+**1.8**
+
+If a couple plans on having children until they have 1 girl or 6 boys, the sample space or  $\Omega$ would be the following (G = Girl, B = Boy):
+
+{G}
+
+{BG}
+
+{BBG}
+
+{BBBG}
+
+{BBBBG}
+
+{BBBBBG}
+
+{BBBBBB}
+
+A reasonable random variable for having a girl is 0.5, P(G) = 0.5. The same probability can be associated with a boy, P(B) = 0.5. This random variable was selected because the outcomes of gender is 1 of 2 possbilities.
+
+**1.10**
+
+In order for the random experiment with three possible outcomes a, b, and c, with P(a) = p, P(b) = p^2, and P(c) = p then the three probailities when added together must = 1. 
+
+A possible probability for the p = 27/64. 
+
+**1.16**
+
+A license plate can be two, three, four, or five letters long and taken from the alphabets A to Z. All letters are possible, including repeats.
+
+(A) The probability of the plate A-R-R is:
+
+$(1/26) * (1/26) * (1/26) * (1/4)$ = 0.00001422394
+
+The 1/4 is also multipled because the plate probability has to be taken into account. There is a .25 percentage chance that the three letter plate is chosen. 
+
+(B) The probability that the four letter plate is chosen is 1/4 or .25. The reason for this is that there are four types of lengths for license plates that can be chosen.
+
+(C) Probability of a plate being a palindrome depends on the exact requirements of the palindrome. If looking for a three letter plate and a palindrome such as DAD, the probability could be as follows:
+
+$(1/26) * (1/26) * (1/26) * (1/4)$ = 0.00001422394
+
+(1/4) = selecting the correct plate
+(1/26) = chances of selecting letters
+
+If looking for a four letter plate and palindrome such as CIVIC, the probability would be as follows:
+
+$(1/4)  *(1/26) * (1/26) * (1/26) * (1/26)$ = 0.0000005470
+
+(D) The probability of the plate having one R is 1/26 no matter the type of plate being selected.
+
+**1.22**
+
+P(AUB) = 0.6 and P(AUB^c)=0.8.
+
+
+
+P(A) =
+
+
 
