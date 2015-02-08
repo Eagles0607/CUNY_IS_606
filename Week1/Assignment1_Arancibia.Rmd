@@ -1,7 +1,7 @@
 ---
 title: "Assignment 1: Introduction to Probability"
 author: "Ben Arancibia"
-date: "February 4, 2015"
+date: "February 8, 2015"
 output: pdf_document
 ---
 
@@ -122,6 +122,105 @@ sample(X, 10, prob = c(0.1, 0.2, 0.3, 0.4), replace = TRUE)
 
 
 __**Dobrow Chapter 2**__
+
+**2.10**
+
+Box A 1WB 2RB
+BOX B 1WB 3RB
+
+Answer: $2/15$ see tree diagram below:
+
+![tree diagram](/users/bcarancibia/CUNY_IS_606/Week1/20150208_143013.jpg)
+
+
+**2.12**
+
+$P(A)$ = $1/2$ $P(B^C|AC)$ = $1/3$ $P(C|A)$ = $1/4$
+
+$P(ABC)$ = $P(A)$ * $P(C|A)$ * $P(B|AC) 
+
+1 - $P(B^C|AC)$ = $P(B|AC)
+
+$1/2$ * $1/4$ * $2/3$
+
+= $1/12$
+
+**2.14**
+
+Using Taylor Series approximation, your resulting formula for Mars used is below:
+
+P(birthday) = $1 - e^-(k^2/2*687)$
+
+Solving for k results in 31 maritians.
+
+
+**2.24**
+
+What is the probability that she has the disease?
+
+D = has cancer
+S = test comes back positive
+
+$P(S|D)$ = .85
+
+$P(S^c|D)$ = .15
+
+$P(S|D^c)$ = .15
+
+$P(S^c|D^c)$ =.05
+
+$P(D)$ = .0238
+
+Using Bayes Formula:
+
+$P(D|S)$ = $(.85)(.0238)/((.85)(.0238)+ (.15)(.9762))$
+
+$P(D|S)$ = 0.1213849
+
+**2.26**
+
+Was the cab blue?
+
+R = reliable
+
+B = Blue
+
+Y = Yellow
+
+C = RB
+
+$P(C)$ = $P(RB)$ + $P(R^cY)$
+
+(.80)(.05) + (0.95)(.2)
+
+$P(C)$ = 0.23
+
+
+**2.30**
+
+Monty Hall problem with 4 envelopes and 100 dollar bill
+
+```{r, warning=FALSE}
+envelopes <- c("A", "B", "C", "D")
+xdata=c()
+
+for(i in 1:1000){
+  prize <- sample(envelopes)[1]
+  pick <- sample(envelopes)[1]
+  open <- sample(envelopes[which(envelopes != pick & envelopes !=prize)])[1]
+  switchyes <- envelopes[which(envelopes != pick & envelopes != open)]
+  if(pick==prize){xdata=c(xdata,"noswitchwin")}
+  if(switchyes==prize){xdata=c(xdata,"switchwin")}
+}
+
+length(which(xdata == "switchwin"))
+length(which(xdata == "noswitchwin"))
+
+```
+
+
+Based on the above code, you should switch.
+
 
 
 
