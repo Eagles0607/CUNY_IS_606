@@ -115,4 +115,14 @@ getEventProb(nrolls = 5,
 
 **1.45**
 
+```{r}
+X <- c(1, 4, 8, 16)
+sample(X, 10, prob = c(0.1, 0.2, 0.3, 0.4), replace = TRUE)
+```
+
+
+__**Dobrow Chapter 2**__
+
+
+
 

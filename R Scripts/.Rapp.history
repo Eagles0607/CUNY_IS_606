@@ -1,0 +1,1311 @@
+setEPS()#
+postscript(file="../Graphics/prefaceBenford.eps", width=3,height=2.5)#
+par(mar = c(2,2,2,2) , mex = .8, cex = .8)#
+prob <- log((2:10)/(1:9),10)#
+barplot(prob,names.arg=(1:9),axisnames=TRUE, ylab="Probability",#
+    xlab="First digit",border="black",axis.lty=1)#
+dev.off()
+setEPS()#
+postscript(file="../Graphics/introBenford.eps", width=3,height=2.5)#
+par(mar = c(2,2,2,2) , mex = .8, cex = .8)#
+prob <- log((2:10)/(1:9),10)#
+barplot(prob,names.arg=(1:9),axisnames=TRUE, ylab="Probability",#
+    xlab="First digit",border="black",axis.lty=1)#
+dev.off()
+setEPS()#
+postscript(file="../Graphics/introBenford.eps", width=3,height=2.5)#
+par(mar = c(4,4,2,2) , mex = .8, cex = .8)#
+prob <- log((2:10)/(1:9),10)#
+barplot(prob,names.arg=(1:9),axisnames=TRUE, ylab="Probability",#
+    xlab="First digit",border="black",axis.lty=1,cex.axis=.9)#
+dev.off()
+setEPS()#
+postscript(file="../Graphics/introBenford.eps", width=3,height=2.5)#
+par(mar = c(5,5,2,2) , mex = .8, cex = .8)#
+prob <- log((2:10)/(1:9),10)#
+barplot(prob,names.arg=(1:9),axisnames=TRUE, ylab="Probability",#
+    xlab="First digit",border="black",axis.lty=1,cex.axis=.8,cex.lab=.8)#
+dev.off()
+setEPS()#
+postscript(file="../Graphics/introBenford.eps", width=3,height=2.5)#
+par(mar = c(5,5,2,2) , mex = .8, cex = .8)#
+prob <- log((2:10)/(1:9),10)#
+barplot(prob,names.arg=(1:9),axisnames=TRUE, ylab="Probability",#
+    xlab="First digit",border="black",axis.lty=1,cex.axis=.8,cex.names=.8)#
+dev.off()
+setEPS()#
+postscript(file="../Graphics/introBenford.eps", width=3.5,height=2.5)#
+par(mar = c(5,5,2,2) , mex = .8, cex = .8)#
+prob <- log((2:10)/(1:9),10)#
+barplot(prob,names.arg=(1:9),axisnames=TRUE, ylab="Probability",#
+    xlab="First digit",border="black",axis.lty=1,cex.axis=.8,cex.names=.8)#
+dev.off()
+curve(dbeta(x,.5,.5),0,1)
+curve(dbeta(x,.6,.6),0,1)
+bathtub curve#
+curve(dbeta(x,1,1),0,1)
+bathtub curve#
+curve(dbeta(x,.75, .75 ),0,1)
+bathtub curve#
+curve(dbeta(x,.25, .25 ),0,1)
+x <- seq(0,1,.1)#
+y <- dbeta(x,1,1)#
+#
+plot(x,y,xlim=c(0,1),xaxt="n",yax="n",ylab="FF")
+x <- seq(0,1,.1)#
+y <- dbeta(x,1,1)#
+#
+plot(x,y,xlim=c(0,1),xaxt="n",yaxt="n",ylab="FF")
+y
+x
+bathtub curve#
+x <- seq(0,1,.1)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),type="l",xaxt="n",yaxt="n",ylab="FF")
+bathtub curve#
+x <- seq(0,1,.05)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")
+x <- seq(0,1,.05)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.25,lty=2)
+bathtub curve#
+x <- seq(0,1,.05)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)
+bathtub curve#
+x <- seq(0,1,.05)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),ylim=c(0,1),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)
+bathtub curve#
+x <- seq(0,1,.05)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),ylim=c(0,2),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)
+bathtub curve#
+x <- seq(0,1,.05)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),ylim=c(0,3),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)
+bathtub curve#
+x <- seq(0,1,.05)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)
+x
+y
+bathtub curve#
+x <- seq(0.01,.99,.05)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)
+bathtub curve#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)
+y
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failuire")#
+text(.5,.2,"Useful Life")#
+text(.9,.5,"Wear-out Failure")
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failuire")#
+text(.5,.5,"Useful Life")#
+text(.9,.5,"Wear-out Failure")
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failuire")#
+text(.5,2.5,"Useful Life")#
+text(.9,.5,"Wear-out Failure")
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failuire")#
+text(.5,2,"Useful Life")#
+text(.5,1.5,"(Constant failure rate)")#
+text(.9,.5,"Wear-out Failure")
+bathtub curve#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.5,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")
+par(mar=c(3,3,1,1),cex=.8)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.5,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")
+par(mar=c(3,3,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.7,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate", xlab="Time")#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.7,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(1,"Failuire Rate")#
+mtext(2,"Time", line = 2)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.7,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate")#
+mtext(2, text = "Time", line = 2)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.7,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 2)#
+mtext(1, text = "Time", line = 2)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.7,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1)#
+mtext(1, text = "Time", line = 1)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.7,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=3.5,height=1.5)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1)#
+mtext(1, text = "Time", line = 1)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.7,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=3.5,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1)#
+mtext(1, text = "Time", line = 1)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.7,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1)#
+mtext(1, text = "Time", line = 1)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure")#
+text(.5,2,"Useful Life")#
+text(.5,1.7,"(Constant failure rate)")#
+text(.9,.5,"Wear-out")#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1,cex=.9)#
+mtext(1, text = "Time", line = 1, cex=.9)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.1,.5,"Early Failure",cex=.8)#
+text(.5,2,"Useful Life", cex=.8)#
+text(.5,1.7,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1,cex=.9)#
+mtext(1, text = "Time", line = 1, cex=.9)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.12,.5,"Early Failure",cex=.8)#
+text(.5,2,"Useful Life", cex=.8)#
+text(.5,1.7,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1,cex=.9)#
+mtext(1, text = "Time", line = 1, cex=.9)#
+abline(v=.2,lty=2)#
+abline(v = .8, lty=2)#
+text(.12,.5,"Early Failure",cex=.8)#
+text(.5,1.9,"Useful Life", cex=.8)#
+text(.5,1.57,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1,cex=.9)#
+mtext(1, text = "Time", line = 1, cex=.9)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.12,.5,"Early Failure",cex=.8)#
+text(.5,1.9,"Useful Life", cex=.8)#
+text(.5,1.57,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1,cex=.9)#
+mtext(1, text = "Time", line = 1, cex=.9)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.12,.5,"Early Failure",cex=.8)#
+text(.5,1.88,"Useful Life", cex=.8)#
+text(.5,1.57,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1,cex=.9)#
+mtext(1, text = "Time", line = 1, cex=.9)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.12,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.57,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1,cex=.9)#
+mtext(1, text = "Time", line = 1, cex=.9)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.12,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.53,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = 1,cex=.9)#
+mtext(1, text = "Time", line = 1, cex=.9)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.12,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .8,cex=.9)#
+mtext(1, text = "Time", line = .8, cex=.9)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.12,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .8,cex=.9,font=2)#
+mtext(1, text = "Time", line = .8, cex=.9,font=2)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.14,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .6,cex=.9,font=2)#
+mtext(1, text = "Time", line = .6, cex=.9,font=2)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.14,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,5),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .6,cex=.9,font=2)#
+mtext(1, text = "Time", line = .6, cex=.9,font=2)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.14,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .6,cex=.9,font=2)#
+mtext(1, text = "Time", line = .6, cex=.9,font=2)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.14,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l", ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .6,cex=.9,font=2)#
+mtext(1, text = "Time", line = .6, cex=.9,font=2)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.14,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .6,cex=.9,font=2)#
+mtext(1, text = "Time", line = .6, cex=.9,font=2)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.14,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .6,cex=.9,font=2)#
+mtext(1, text = "Time -------->", line = .6, cex=.9,font=2)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.14,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .6,cex=.9,font=2)#
+mtext(1, text = " ---------------------- Time ---------------->", line = .6, cex=.9,font=2)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.14,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)
+bathtub curvesetEPS()#
+postscript(file="../Graphics/c6bathtub.eps", width=4,height=3)#
+par(mar=c(5,5,1,1),cex=1)#
+x <- seq(0.01,.99,.01)#
+y <- dbeta(x,.5,.5)#
+plot(x,y,xlim=c(0,1),ylim=c(0,4),type="l",xaxt="n",yaxt="n",ylab="Failure Rate",ann=FALSE)#
+mtext(2, text = "Failure Rate", line = .6,cex=.9,font=2)#
+mtext(1, text = " Time ", line = .6, cex=.9,font=2)#
+abline(v=.19,lty=2)#
+abline(v = .81, lty=2)#
+text(.14,.5,"Early Failure",cex=.8)#
+text(.5,1.86,"Useful Life", cex=.8)#
+text(.5,1.5,"(Constant failure rate)",cex=.8)#
+text(.9,.5,"Wear-out",cex=.8)#
+dev.off()
+Lollipop#
+setEPS()#
+postscript(file="../Graphics/c10lollipop.eps", width=3.5,height=1.5)#
+par(mfrow=c(1,1),mar = c(1, 1, 2,2) , mex = .8, cex = .8)#
+plot(1,1 ,xaxt="n",ylab="",xlab="",type = "n", xlim=c(-1,5.2), ylim=c(-1.1,1.1), yaxt="n" )#
+s <- c(0:5,3,1,4,2,0)#
+z<- 2*pi*s/5#
+lines(cos(z),sin(z))#
+lines(c(1,2,3,4,5),c(0,0,0,0,0))#
+points(cos(z),sin(z),pch=16)#
+points(c(1,2,3,4,5),c(0,0,0,0,0),pch=16)#
+#
+dev.off()
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xlab="Steps",ylab="Position",ylim=c(-200,200))#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xlab="",ylab="",ylim=c(-200,200))#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+setEPS()#
+postscript(file="../coverrw.eps", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xlab="",ylab="",ylim=c(-200,200))#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+setEPS()#
+postscript(file="../coverrw.eps", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axes(1, at =seq(0,10000,1000))#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,1000))#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=T)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=T)#
+axis(2,at=seq(-200,200,100),labels=T)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+Cover RW#
+setEPS()#
+postscript(file="../coverrw.eps", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=T)#
+axis(2,at=seq(-200,200,100),labels=T)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../coverrw.eps", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=T)#
+axis(2,at=seq(-200,200,100),labels=T)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=T,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=T,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+Cover RW#
+setEPS()#
+postscript(file="../../coverrw.eps", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=T,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=T,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../coverrw.eps", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../CoverPics/coverrw.eps", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../CoverPics/coverrw.jpg", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../CoverPics/coverrw.jpg", width=6,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../CoverPics/coverrw.jpg", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../CoverPics/coverrw.pdf", width=4,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../CoverPics/coverrw.eps", width=5,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../CoverPics/coverrw.pdf", width=5,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../CoverPics/coverrw.eps", width=5,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+setEPS()#
+postscript(file="../../CoverPics/coverrw.eps", width=5,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+Cover RW#
+setEPS()#
+postscript(file="../../CoverPics/coverrw.eps", width=5,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)#
+dev.off()
+install.packages("gplots")#
+library(gplots)#
+#
+par(mfrow=c(1,2))#
+ par(mfrow=c(1,1))#
+x <- seq(-3,3,.1)#
+y <- seq(-3,3,.1)#
+n <- length(x)#
+dat <- outer(x,y)#
+for (i in 1:n) {#
+	for (j in 1:n) {#
+	dat[i,j] <- exp(-(x[i]^2 + y[j]^2)/2) / (2*pi)#
+	}#
+}#
+#
+filled.contour(x,y,dat,frame.plot=F,,col=colorpanel(18, "grey90","black"))#
+x <- seq(-3,3,.1)#
+y <- seq(-3,3,.1)#
+n <- length(x)#
+dat <- outer(x,y)#
+for (i in 1:n) {#
+	for (j in 1:n) {#
+	dat[i,j] <- exp(-(x[i]^2 - 2* .6*x[i]*y[j] +y[j]^2)/(2*(1-.6^2))) / (2*pi*sqrt(1-.6^2))#
+	}#
+}#
+#
+filled.contour(x,y,dat,col=colorpanel(20, "grey90","black"))#
+contour
+setEPS()#
+postscript(file="../Graphics/appendplot2.eps", width=3.5,height=2.5)#
+par(mar = c(5, 5, 3,1) , mex = .7, cex = .7)#
+curve(pi*x^2,1,20,xlab="radius",ylab="area",main="Area as function of radius")#
+dev.off()
+ppois(6:8,7)
+sum(dpois(6:8,7))
+decode.R#
+#
+mat <- read.table("ShakeCount.txt",header=F)#
+mat <- read.table("AustenCount.txt",header=F)
+mat <- read.table("AustenCount.txt",header=F)
+mat <- read.table("AustenCount.txt",header=F)#
+logmat <- log(mat + 1)#
+str <- c("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"," ")
+oldcode <- "the theory of probabilities is at bottom nothing but common sense reduced to calculus it enables us to appreciate with exactness that which accurate minds feel with a sort of instinct for which often they are unable to account it is remarkable that a science which began with the consideration of games of chance should have become the most important object of human knowledge"
+oldcode <- keep#
+code_length <- nchar(oldcode)#
+vec0 <- 1:code_length#
+c1 <- code_length - 1#
+vec1 <- 1:c1#
+oldcode <- dec(oldcode,sample(1:26))#
+keep1 <- oldcode#
+tw <- 1:26#
+func <- 1:27
+cost <- function(code) {#
+ 	#code_length <- nchar(code)#
+ 	p <- 0#
+ 	for (i in vec1){#
+ 		p <- p+ logmat[grep(substr(code,i,i),str),grep(substr(code,i+1,i+1),str)]#
+ 	}#
+ p}#
+ ### need translator here#
+ dec <- function(code,func) {  # p#
+      out <- code#
+    #  tt <- nchar(out)#
+          for (i in vec0) {#
+      ct <- grep(substr(code,i,i),str)#
+      if (ct < 27) substr(out,i,i) <- str[func[ ct ]] }#
+          out }
+oldcode <- keep#
+code_length <- nchar(oldcode)#
+vec0 <- 1:code_length#
+c1 <- code_length - 1#
+vec1 <- 1:c1#
+oldcode <- dec(oldcode,sample(1:26))#
+keep1 <- oldcode#
+tw <- 1:26#
+func <- 1:27
+oldcode
+for (i in 1:4000) {#
+	p <- sample(tw,2)#
+	old <- func#
+	func[p[1]] <- old[p[2]]#
+	func[p[2]] <- old[p[1]]#
+	newcode <- dec(oldcode,func)#
+	p1 <- cost(dec(oldcode,old))#
+	p2 <- cost (newcode)#
+	if (runif(1) > exp(p2-p1)^1.3) func <- old#
+	if ((i %%  200) == 0) print(dec(oldcode,func))#
+}
+oldcode <- keep#
+code_length <- nchar(oldcode)#
+vec0 <- 1:code_length#
+c1 <- code_length - 1#
+vec1 <- 1:c1#
+oldcode <- dec(oldcode,sample(1:26))#
+keep1 <- oldcode#
+tw <- 1:26#
+func <- 1:27#
+for (i in 1:4000) {#
+	p <- sample(tw,2)#
+	old <- func#
+	func[p[1]] <- old[p[2]]#
+	func[p[2]] <- old[p[1]]#
+	newcode <- dec(oldcode,func)#
+	p1 <- cost(dec(oldcode,old))#
+	p2 <- cost (newcode)#
+	if (runif(1) > exp(p2-p1)) func <- old#
+	if ((i %%  200) == 0) print(dec(oldcode,func))#
+}
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=2)
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=1)#
+lines(c(1,10000), c(1,0))
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=1)#
+lines(c(0,10000), c(1,1))
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=1)#
+lines(c(0,10000), c(100,100))#
+lines(c(0,10000), c(100,100))#
+lines(c(0,10000), c(100,100))#
+lines(c(0,10000), c(100,100))
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=1)#
+lines(c(0,10000), c(100,100))#
+lines(c(0,10000), c(-100,-100))#
+lines(c(0,10000), c(200,200))#
+lines(c(0,10000), c(-200,200))
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=1)#
+lines(c(0,10000), c(100,100))#
+lines(c(0,10000), c(-100,-100))#
+lines(c(0,10000), c(200,200))#
+lines(c(0,10000), c(-200,-200))
+setEPS()#
+postscript(file="../../CoverPics/coverrw.eps", width=5,height=2.5)#
+par(mar = c(2.3, 4.2, 2,2), mex = .8, cex = .8)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+plot(cumsum(rw),type="l",xaxt="n", yaxt="n", xlab="",ylab="",ylim=c(-200,200))#
+axis(1, at =seq(0,10000,2000), labels=F,cex.axis=.85)#
+axis(2,at=seq(-200,200,100),labels=F,cex.axis=.85)#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+rw <- sample(c(-1,1), 10000, replace=T)#
+lines(cumsum(rw),type="l")#
+lines(c(0,10000),c(0,0),lty=1)#
+lines(c(0,10000), c(100,100))#
+lines(c(0,10000), c(-100,-100))#
+lines(c(0,10000), c(200,200))#
+lines(c(0,10000), c(-200,-200))#
+dev.off()
+x <- runif(0,1); x/(1-x)
+x <- runif(1); x/(1-x)
+replicate(100,x <- runif(1); x/(1-x))
+replicate(100,(x <- runif(1); x/(1-x)))
+simlist <- numeric(10000)
+for (i in 1:10000) { x <- runif(1); simlist[i] <- x/(1-x)}
+hist(simlist)
+hist(simlist[simlist <100])
+log(1000000)
+log(5)/log(4)
+runif(1,runif(1))
+simlist <- replicate(1000,runif(1,runif(1)))
+simlist
+simlist <- replicate(100000,runif(1,runif(1)))
+(sum(simlist<1/4))/100000
+simlist <- replicate(100000,runif(1,0,runif(1)))
+(sum(simlist<1/4))/100000
+sample(1:9,10,replace=T)
+sample(1:9,20,replace=T)
+sample(1:9,100,replace=T)
+rpois(1,rexp(1,1))
+replicate(10,rpois(1,rexp(1,1)))
+simlist <- replicate(100000,rpois(1,rexp(1,1)))
+mean(simlist)
+var(simlist)
+sqrt(675)
+32/144
+2/9
+27/144
+3/16
+1-ppois(4,2)
+1-pexp(5,1/2)
+1-pnorm(5,2,2)
+.5^4
+5/6
+sqrt(350*10000/3)
+pnorm(510,500,sqrt(150))-pnorm(480,500,sqrt(150))
+pnorm(510,500,sqrt(450))-pnorm(480,500,sqrt(450))
+1-pnorm(2.5,2,sqrt(0.2))
+1-pgamma(2.5,20,1/2)
+1-pgamma(20*2.5,20,1/2)
+1000000*2/38
+1-(2/38)^2
+1000000*(1-(2/38)^2)
+pnorm(55000,52631.58,sqrt(99))
+1000000*(1-(2/38)^2)
+sqrt(1000000*(1-(2/38)^2))
+pnorm(55000,52631.58,998.614)-pnorm(50000,52631.998.614)
+pnorm(55000,52631.58,998.614)-pnorm(50000,52631,998.614)
+dbinom(c(1,3,6),20,0.328)
+20*0.328
+20*0.328*0.672
+pbinom(c(1,3,6),20,0.328)
+pnorm(c(1,3,6)+0.5,6.56,sqrt(4.40832))
+20*.328
+20*.328*.672
+pnorm(c(1,3,6),6.56,sqrt(4.40832))
+pnorm(23,45/2,sqrt(9/8))-pnorm(22,45/2,sqrt(9/8))
+qnorm(.995)
+qnorm(.995)/2
+(qnorm(.995)/2)^2
+10/14
+10/16
+1-pnorm(14.5, 10, sqrt(10))
+1-pnorm(14, 10, sqrt(10))
+1-ppois(13,10)
+1-pnorm(13.5, 10, sqrt(10))
+pnorm(1/2)-pnorm(-1/2)
+prod(runif(100))
+simlist <- replicate(10000,prod(runif(100)))
+n <- 10000#
+simlist <- replicate(n,prod(runif(100)))#
+sum( simlist <= 2^(-100) & simlist >= 3^(-100))/n
+n <- 100000#
+simlist <- replicate(n,prod(runif(100)))#
+sum( simlist <= 2^(-100) & simlist >= 3^(-100))/n
+1-pnorm(1,10,5.16)
+n = 20
+1-pnorm((.5-n/3)/sqrt(8*n/9))
+n=25
+1-pnorm((.5-n/3)/sqrt(8*n/9))
+n=35
+1-pnorm((.5-n/3)/sqrt(8*n/9))
+n=50
+1-pnorm((.5-n/3)/sqrt(8*n/9))
+n=45
+1-pnorm((.5-n/3)/sqrt(8*n/9))
+1-pnorm((1-n/3)/sqrt(8*n/9))
+1-pnorm((.5-n/3)/sqrt(8*n/9))
+n=46
+1-pnorm((.5-n/3)/sqrt(8*n/9))
+n=47
+1-pnorm((.5-n/3)/sqrt(8*n/9))
+qnorm(0.01)
+rnorm(1)^2 + rnorm(1)^2
+replicate(10000,rnorm(1)^2 + rnorm(1)^2)
+simlist <- replicate(10000,rnorm(1)^2 + rnorm(1)^2)
+hist(simlist,prob=T)
+curve(dexp(x,1),add=T)
+curve(dexp(x,1/2),add=T)
+sqrt(runif(1))
+if (runif(1) + runif(1) < 1) 1 else 0
+mcmcpois <- function(lambda, trials) {#
+state <- 0#
+for (i in 1:trials) {#
+	coin <- rbinom(1,1,1/2)#
+	if (coin == 1) {#
+		if (runif(1) < lambda/(state + 1) state <- state+1 else state <- state}#
+		else {#
+		if (runif(1) < state/lambda) state <- state -1 else state <- state}	#
+	}#
+	return(state)#
+}
+mcmcpois <- function(lambda, trials) {#
+state <- 0#
+for (i in 1:trials) {#
+	coin <- rbinom(1,1,1/2)#
+	if (coin == 1) {#
+		if (runif(1) < lambda/(state + 1)) state <- state+1 else state <- state}#
+		else {#
+		if (runif(1) < state/lambda) state <- state -1 else state <- state}	#
+	}#
+	return(state)#
+}
+mcmcpois(4,100)
+simlist <- replicate(10000, mcmcpois(4,100))
+hist(simlist,prob=T)
+table(simlist)
+table(simlist)/10000
+dpois(0:13,4)
+simlist <- replicate(50000, mcmcpois(3.5,50))
+table(simlist)/50000
+dpois(0:14,3.5)
+round(dpois(0:14,3.5),3)
+round(table(simlist)/50000,3)
+gibbsnormal <- function(n, rho, ux, uy, sigx, sigy) {#
+	x <- 0#
+	y <- 0#
+	for (i in 1:n) {#
+		x <- rnorm(1, ux + rho*(sx/sy)*(y-uy), sx^2*(1-rho^2))#
+		y <- rnorm(1, uy + rho*(sy/sx)*(x-ux), sy^2*(1-rho^2)) }#
+		return(c(x,y))}#
+simlist <- replicate(1000, gibbsnormal(100,0.8, 1, 5, 1, 10))#
+plot(t(simlist))
+gibbsnormal <- function(n, rho, ux, uy, sx, sy) {#
+	x <- 0#
+	y <- 0#
+	for (i in 1:n) {#
+		x <- rnorm(1, ux + rho*(sx/sy)*(y-uy), sx^2*(1-rho^2))#
+		y <- rnorm(1, uy + rho*(sy/sx)*(x-ux), sy^2*(1-rho^2)) }#
+		return(c(x,y))}#
+simlist <- replicate(1000, gibbsnormal(100,0.8, 1, 5, 1, 10))#
+plot(t(simlist))
+gibbsnormal <- function(n, rho, ux, uy, sx, sy) {#
+	x <- 0#
+	y <- 0#
+	for (i in 1:n) {#
+		x <- rnorm(1, ux + rho*(sx/sy)*(y-uy), sx^2*(1-rho^2))#
+		y <- rnorm(1, uy + rho*(sy/sx)*(x-ux), sy^2*(1-rho^2)) }#
+		return(c(x,y))}#
+simlist <- replicate(1000, gibbsnormal(100,0.8, 0, 3, -20, 10))#
+plot(t(simlist))
+gibbsnormal <- function(n, rho, ux, uy, sx, sy) {#
+	x <- 0#
+	y <- 0#
+	for (i in 1:n) {#
+		x <- rnorm(1, ux + rho*(sx/sy)*(y-uy), sx^2*(1-rho^2))#
+		y <- rnorm(1, uy + rho*(sy/sx)*(x-ux), sy^2*(1-rho^2)) }#
+		return(c(x,y))}#
+simlist <- replicate(1000, gibbsnormal(100,0.8, 0, -20, 3, 10))#
+plot(t(simlist))
+39;1
+30/12
+u1 <- runif(1000)#
+u2 <- runif(1000)#
+x <- -2*log(u1)* cos(2*pi*u2)#
+y <- -2*log(u1)*sin(2*pi*u2)#
+plot(x,y)
+hist(x)
+x
+y
+summary(x)
+mean(x)
+var(x)
+u1 <- runif(1000)#
+u2 <- runif(1000)#
+x <- sqrt(-2*log(u1))* cos(2*pi*u2)#
+y <- sqrt(-2*log(u1))*sin(2*pi*u2)#
+plot(x,y)#
+hist(x)
+plot(x,y)
