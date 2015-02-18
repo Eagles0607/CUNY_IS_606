@@ -1,0 +1,41 @@
+---
+title: "Assignment 2"
+author: "Ben Arancibia"
+date: "February 17, 2015"
+output: pdf_document
+---
+
+__**Dobrow Chapter 3**__
+
+**3.3**
+
+If a tree has 70% change of being infected with root rot or bark disease there is a 40% chance it has root disease. If you take the compliment of 40%, (1-.4), then the infected tree has a 60% (.6) that it is bark disease. 
+
+P(Infected|Bark) = (.7) * (.6)
+P(I|B) = 0.42
+
+**3.6**
+
+Lottery tickets 1 and 1000
+Tickets needed to buy to get probability of winning 50%
+
+x=tickets needed to get probability of winning to 50%
+
+.5=(1/1000)*x
+x=500 Tickets
+
+**3.8**
+50-50 chance that the queen carries hemophilia and each prince has 50-50 change of having hemophilia.
+
+a) three princes without the disease, what the is the probability the queen is a carrier.
+
+P=(.5p) * (.5p) * (.5p) * (.5q)
+0.0625
+
+b) If there is a four prince what is the probability
+P=(.5p)*(.5q)
+0.25
+
+**3.16**
+
+
