@@ -29,13 +29,80 @@ x=500 Tickets
 
 a) three princes without the disease, what the is the probability the queen is a carrier.
 
-P=(.5p) * (.5p) * (.5p) * (.5q)
-0.0625
+P(H|E) = P(H)P(E|H)/P(H)P(E|H + P(H^C)P(E|H^C)
+.5^3 * .5 / (.5^3 * .5 + .5)
+
+=.111
 
 b) If there is a four prince what is the probability
-P=(.5p)*(.5q)
-0.25
+P(H|E) = P(H)P(E|H)/P(H)P(E|H + P(H^C)P(E|H^C)
+.5^4 * .5 / (.5^4 * .5 + .5)
+
+=0.05882353
 
 **3.16**
+
+$(n/k)$ = $n!/k!(n-k)!$
+
+a) Straight Flush (5 cards same suit)
+P(Straight Flush) = 36/(52/5)
+P(Straight Flush) = $36/(8.065818e+67/(120*2.586232e+59))$
+=1.385169e-05
+
+b) Four of a Kind (four cards one face value and one other card)
+P(Four of a Kind) = 624/(52/5)
+=$624/(8.065818e+67/(120*2.586232e+59))$
+=0.000240096
+
+c) Full House (three cards of one face value and wo of another face value)
+P(Full House) = 3744/(52/5)
+=$3744/(8.065818e+67/(120*2.586232e+59))$
+= 0.001440576
+
+d) Flush (five cards same suit)
+P(Flush) = 5108/(52/5)
+=$5108/(8.065818e+67/(120*2.586232e+59))$
+= 0.001965401
+
+e) Straight (Five cards in a sequence)
+P(Straight) = 10200/(52/5)
+=$10200/(8.065818e+67/(120*2.586232e+59))$
+= 0.003924646
+
+f) Three of a Kind (Three cards)
+P(Three Kind) = 54912/(52/5)
+=$54192/(8.065818e+67/(120*2.586232e+59))$
+= 0.02085141
+
+g) Two Pair
+P(Two Pair) = 123552/(52/5)
+=$123552/(8.065818e+67/(120*2.586232e+59))$
+= 0.04753901
+
+h) One Pair
+P(One Pair) = 1098240/(52/5)
+=$1098240/(8.065818e+67/(120*2.586232e+59))$
+= 0.4225689
+
+**3.22**
+```{r}
+p <- as.numeric(1/6)
+scenarios <- c(1, 2, 3)
+ 
+for (i in scenarios) {
+  # Accumulate the probability that fewer than the target # of sixes occurs.
+   x <- 0
+   # Total number of dice.
+   n <- 6 * i
+   # Calculate the probability for each possible # of sixes that is less than the goal.
+   for (j in 0:(i-1)) {
+     x <- x + dbinom(j, n, p)
+   }
+   print(paste("Probability of at least", i, "six in", n, "fair dice:", 1 - x))
+}
+```
+
+
+**3.26**
 
 
