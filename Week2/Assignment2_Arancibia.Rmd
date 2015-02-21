@@ -105,4 +105,64 @@ for (i in scenarios) {
 
 **3.26**
 
+a) Find the Probability of zero detections
 
+a = occupancy rate
+p = detection rate
+n = number of sites
+
+Assume n = 1000 and occupancy rate = 0.25, detection rate
+
+```{r}
+dbinom(0, 1000, .25)
+
+```
+
+Based on these assumptions, 0.05 is the answer. More information is needed to determine chance for 0 detection rate. The question is very vague though
+
+b)
+
+The Probability function for Z is 
+
+P(Z) = 1 - P(Z<5) = 1 - $Sigma$ P(Z=k)
+1- $Sigma$$(5 / k)$ (.5)^k(.5)5-k
+
+
+n = 5
+p = .5
+a = 0.75
+
+**3.34**
+Over 104 seasons there were there were 206 no hitter games. That means the rate of no hitters is 206 per 104 years. $\lambda$ = 206/104. 206/104 = 1.98
+
+```{r}
+probs <- dpois(0:7, 1.98)
+probs <- c(probs, 1-ppois(7, 1.98))
+games <- 104*probs
+knitr::kable(games)
+```
+
+The table goes from 0 games to 7 games and the expected seasons per game. So 14.35 is the expected number of seasons with 0 no hitters, 28.43 seasons with 1 no hitter, etc.
+
+
+**3.45**
+```{r}
+barplot(rpois(200, 0.61))
+barplot(rpois(10000,0.61))
+
+probs <- dpois(0:4, 0.61)
+probs <- c(probs, 1-ppois(4, 0.61))
+expected <- 200*probs
+expected
+barplot(expected)
+
+probs2 <- dpois(0:4, 0.61)
+probs2 <- c(probs2, 1-ppois(4, 0.61))
+expected2 <- 10000*probs2
+expected2
+barplot(expected2)
+
+```
+
+
+__**Dobrow Chapter 4**__
