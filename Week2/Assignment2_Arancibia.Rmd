@@ -147,8 +147,6 @@ The table goes from 0 games to 7 games and the expected seasons per game. So 14.
 
 **3.45**
 ```{r}
-barplot(rpois(200, 0.61))
-barplot(rpois(10000,0.61))
 
 probs <- dpois(0:4, 0.61)
 probs <- c(probs, 1-ppois(4, 0.61))
@@ -166,3 +164,27 @@ barplot(expected2)
 
 
 __**Dobrow Chapter 4**__
+
+**4.6**
+E[$X^2$]=1, E[$Y^2$]=2, and E[XY]=3
+
+E[$(X+Y)^2$] = E[$(X^2 + 2XY + Y^2)$]
+
+E[$1^2 + 2(3) + 2^2$]
+
+E[1+6+4]
+
+E[11]
+
+**4.16**
+
+If X and Y are independent random variables E[X/Y] = E[X]/E[Y]. 
+
+Proof
+Let X and Y be indepdent random variables then any function f and g, 
+
+$E[f(X)/g(Y)] = E[f(X)]/E[g(Y)]$.
+
+Let f and g be the identify function gives
+$E[X/Y] = E[X]/E[Y]$
+
