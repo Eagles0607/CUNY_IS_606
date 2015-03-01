@@ -1,0 +1,157 @@
+---
+title: "Collaborative Assignment 1"
+author: "Matt Moramarco, Ben Arancibia, Vuthy Nguy, Sreejaya Vasudevannair"
+date: "February 26, 2015"
+output: pdf_document
+---
+__**Introduction**__
+
+James ia budding entrepreneur and for the last two years he has been operating a sanwich stand in the lobby of his office building during the lunch hour. James has been tracking sandwich demand.The following analysis will allow for James to run his business more effectively and determine how many sanwiches of each type he should bring each day to maximize his profits.
+
+
+__**Questions and Assumptions**__
+
+Based on the data there are a couple of questions and assumptions that need to be defined.
+
+**Question**
+1) Is a particular sandwhich demand independent of others.
+
+-Based on the data we believe that sandwhich demand is indepdent.
+
+**Assumptions**
+
+Our group made some assumptions of the data in order to perform the analysis. The assumptions are as follows:
+
+1) There is no impact of time on demand, i.e. the seasons do not change demand
+
+2) An order being fulfilled/unfulfilled today does not impact demand in the future. For instance, "sandwich vendor didn't have my sandwich, I'm never going there again." Without this assumption, the analysis would need to ascribe some additional cost to unmet demand besides just the lost profit from that one sale.
+
+3) Sandwiches purchased for the day are only good for that day. This would indicate that if we think ten sandwiches would be sold but only sell eight, the costs of the last two would be a complete loss taken out of profits which would impact the ideal inventory level for a day.
+
+The next step in the analysis is to do a quick exploratory analysis of the data.
+
+__**Exploring the Demand Data**__
+
+```{r}
+sales.data <- read.csv("/users/bcarancibia/CUNY_IS_606/Week2/sales.csv")
+library(ggplot2)
+ham.plot <- ggplot(sales.data,aes(x=demand.ham)) + 
+  geom_histogram(binwidth=1, aes(y = ..density..)) + geom_density(color="red")
+turkey.plot <- ggplot(sales.data,aes(x=demand.turkey)) + 
+  geom_histogram(binwidth=1, aes(y = ..density..)) + geom_density(color="red")
+veggie.plot <- ggplot(sales.data,aes(x=demand.veggie)) + 
+  geom_histogram(binwidth=1, aes(y = ..density..)) + geom_density(color="red")
+# Display Plots
+ham.plot
+turkey.plot
+veggie.plot
+```
+
+### Understanding Correlation of Sales by Sandwich Type
+
+```{r}
+cor(sales.data[,2:4])
+```
+
+### Developing Probability Density Functions by Sandwich Type
+
+```{r}
+ham.pois <- data.frame(rpois(n=10000,lambda=mean(sales.data$demand.ham)))
+names(ham.pois) <- c("ham.data")
+ham.pois.plot <- ggplot(ham.pois,aes(x=ham.data)) + 
+  geom_histogram(binwidth=1, aes(y = ..density..)) + geom_density(color="red")
+turkey.pois <- data.frame(rpois(n=10000,lambda=mean(sales.data$demand.turkey)))
+names(turkey.pois) <- c("turkey.data")
+turkey.pois.plot <- ggplot(turkey.pois,aes(x=turkey.data)) + 
+  geom_histogram(binwidth=1, aes(y = ..density..)) + geom_density(color="red")
+veggie.pois <- data.frame(rpois(n=10000,lambda=mean(sales.data$demand.veggie)))
+names(veggie.pois) <- c("veggie.data")
+veggie.pois.plot <- ggplot(veggie.pois,aes(x=veggie.data)) + 
+  geom_histogram(binwidth=1, aes(y = ..density..)) + geom_density(color="red")
+# Display Plots
+ham.pois.plot
+turkey.pois.plot
+veggie.pois.plot
+```
+
+### Understanding the Cost/Benefit for Inventory Levels
+
+```{r}
+price.cost <- read.csv("/users/bcarancibia/CUNY_IS_606/Week2/details.csv")
+price.cost$profit <- price.cost$price - price.cost$cost
+
+inv.levels <- data.frame(cbind(0:50,0))
+names(inv.levels) <- c("inv","profits")
+
+# Ham
+ham.inv.levels <- inv.levels
+ham.samples <- rpois(n=100000,lambda=mean(sales.data$demand.ham))
+
+for (i in 0:50) {
+  temp <- data.frame(ham.samples)
+  names(temp) <- c("demand")
+  temp$total.cost <- i * 3.5
+  temp$total.revenue <- i * 6.50
+  temp$total.revenue[temp$demand <= i] <- temp$demand[temp$demand <= i] * 6.50
+  temp$profit <- temp$total.revenue - temp$total.cost
+  ham.inv.levels[i+1,2] <- mean(temp$profit)
+}
+
+# Turkey
+turkey.inv.levels <- inv.levels
+turkey.samples <- rpois(n=100000,lambda=mean(sales.data$demand.turkey))
+
+for (i in 0:50) {
+  temp <- data.frame(turkey.samples)
+  names(temp) <- c("demand")
+  temp$total.cost <- i * 4
+  temp$total.revenue <- i * 6.50
+  temp$total.revenue[temp$demand <= i] <- temp$demand[temp$demand <= i] * 6.50
+  temp$profit <- temp$total.revenue - temp$total.cost
+  turkey.inv.levels[i+1,2] <- mean(temp$profit)
+}
+
+# Veggie
+veggie.inv.levels <- inv.levels
+veggie.samples <- rpois(n=100000,lambda=mean(sales.data$demand.veggie))
+
+for (i in 0:50) {
+  temp <- data.frame(veggie.samples)
+  names(temp) <- c("demand")
+  temp$total.cost <- i * 3.5
+  temp$total.revenue <- i * 6.50
+  temp$total.revenue[temp$demand <= i] <- temp$demand[temp$demand <= i] * 6.50
+  temp$profit <- temp$total.revenue - temp$total.cost
+  veggie.inv.levels[i+1,2] <- mean(temp$profit)
+}
+
+ham.profit.plot <- ggplot(ham.inv.levels,aes(x=inv, y=profits)) + 
+  geom_hline(aes(yintercept=0)) + geom_line() + ggtitle("Ham: Profit by Inventory Level") + 
+  xlab("Inventory") + ylab("$ Profits") + 
+  geom_vline(aes(xintercept=
+                   ham.inv.levels[
+                     ham.inv.levels$profits==max(ham.inv.levels$profits),1]))
+turkey.profit.plot <- ggplot(turkey.inv.levels,aes(x=inv, y=profits)) + 
+  geom_hline(aes(yintercept=0)) + geom_line() + ggtitle("Turkey: Profit by Inventory Level") + 
+  xlab("Inventory") + ylab("$ Profits") +
+  geom_vline(aes(xintercept=
+                   turkey.inv.levels[
+                     turkey.inv.levels$profits==max(turkey.inv.levels$profits),1]))
+veggie.profit.plot <- ggplot(veggie.inv.levels,aes(x=inv, y=profits)) + 
+  geom_hline(aes(yintercept=0)) + geom_line() + ggtitle("Veggie: Profit by Inventory Level") + 
+  xlab("Inventory") + ylab("$ Profits") +
+  geom_vline(aes(xintercept=
+                   veggie.inv.levels[
+                     veggie.inv.levels$profits==max(veggie.inv.levels$profits),1]))
+
+# Display Plots
+ham.profit.plot
+mean(sales.data$demand.ham)
+ham.inv.levels[ham.inv.levels$profits==max(ham.inv.levels$profits),1]
+turkey.profit.plot
+mean(sales.data$demand.turkey)
+turkey.inv.levels[turkey.inv.levels$profits==max(turkey.inv.levels$profits),1]
+veggie.profit.plot
+mean(sales.data$demand.veggie)
+veggie.inv.levels[veggie.inv.levels$profits==max(veggie.inv.levels$profits),1]
+```
