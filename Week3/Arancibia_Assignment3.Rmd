@@ -1,0 +1,105 @@
+---
+title: "Assignment 3 - More on Random Variables"
+author: "Ben Arancibia"
+date: "March 11, 2015"
+output: pdf_document
+---
+__**Chapter 4**__
+
+**4.24**
+
+Find the variance of a fair die roll.
+
+To find variance first you need to find the expected value: 
+
+Expected Value: 
+(1 * 1/6) + (2 * 1/6) + (3 * 1/6) + (4 * 1/6) + (5 * 1/6) + (6 * 1/6) = 21/6 = 3.5
+
+then take the variance of the expected value:
+
+(1 - 3.5)^2 * 1/6 + (2 - 3.5)^2 * 1/6 + (3 - 3.5)^2 * 1/6  + (4 - 3.5)^2 * 1/6 + (5 - 3.5)^2 * 1/6 + (6 - 3.5)^2 * 1/6
+= 70/24 
+= 2.91
+
+
+**4.36**
+
+Cor(X,Y) = -0.5
+Find V[X+Y]
+
+V[X+Y] = V[X] + V[Y] + 2 COR(X,Y)
+
+V[X] + V[Y] + 2 * (-0.5)
+
+V[X+Y] = variance since it is equal distribution, mean, STD, variance are all the same.
+=.25
+
+**4.40**
+
+E[X] = 1
+E[X^2] = 2
+E[X^3] = 5
+E[X^15] = 15
+
+E[Y] = 2
+E[Y^2] = 6 
+E[Y^3] = 22
+E[Y^4] = 94
+
+V[3X^2 - Y] = 138
+V[X^2] = (9*(2)^4 - 2^2)
+V[Y] = 6 - 4
+
+E[X^4Y^4]
+15*94
+=1410
+
+COV(X, X2)
+V[X^2] = 9 - 2^2
+V[X] = 1 - 1
+6 - 3
+=3
+
+V[X^2Y^2]
+V[X^2] = 6
+V[Y^2]1296-36
+6+1260
+=1266
+
+
+**4.56**
+```{r}
+sim <- sample(c(-10,-10,-10,0,0,14), 100000, replace = T)
+mean(sim)
+var(sim)
+
+```
+
+**4.58**
+
+```{r}
+x <- rpois(100000, 1)
+y <- rpois(100000, 2)
+var(3*x^2 - y)
+mean(x^4 * y^4)
+cov(x, x^2)
+var(x^2*y^2)
+
+```
+
+
+__**Chapter 5**__
+
+**5.2**
+
+
+
+
+
+
+
+
+
+
+
+
