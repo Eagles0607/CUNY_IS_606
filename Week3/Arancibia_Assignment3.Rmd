@@ -90,8 +90,153 @@ var(x^2*y^2)
 
 __**Chapter 5**__
 
-**5.2**
+**5.4**
+.01% chance of being defective
 
+a) Find the probability that exactly 110 Components produced before defective one:
+P(X=k) = (1-p)^k-1
+((1-.01)^109)*.01
+=0.0033
+
+b) Find the probability that takes at least 110 components before defective:
+P(X>110)
+(1-p)^k
+((1-.01)^109)
+=0.33
+
+c) Find is the expected number of components that will be produced before a defective one:
+E[X] = 1/p
+1/.01
+=100
+
+**5.12**
+
+X ~ NgBin(R,p)
+p=0.5
+
+2 (k -1 | 3) (1/2)^k
+
+E[X] = 4(0.125) + 5(0.25) + 6(0.3125) + 7(0.3125)
+=5.8125
+
+**5.20**
+500 deer, sample of 50 deer caught and tagged.
+
+20 are then caught.
+
+a)
+50/500
+0.1*20
+E[X] = 2
+
+variance of E[X] = 1.8496
+
+SD[X] = (1.8495)^1/2
+
+=1.316
+
+b)
+
+P(X>=3) = (20 | 3) (480 | 17) / (500 | 20)
+
+P(X>=3) = 0.322
+
+**5.28**
+
+10 rolls fair die, X = number of fives rolled, Y = number of even numbers, Z = number of odd numbers
+
+a) COV(X, Y)
+
+-nP(x)P(y)
+-1/6 , 3/6
+=-5/6
+
+b) Cov(X, Z)
+-nP(X)P(Z)*-1 #but if a 5 is rolled that is both odd number and a 5
+1/6, 3/6, *-1
+
+=5/6
+
+**5.32**
+
+Let X be the number of days when there is no homework. N = 42, p = 1/30, condition is prime number (1/15)
+10 prime numbers
+
+(1/30) * 42 (N) * 10 (prime numbers)
+
+Number days expect to have no homework is 14
+
+**5.34**
+
+This is a hypergeometric distribution
+
+Let X be 3 winners. N = 30 and six are winners
+
+6/30
+0.2*10
+E[X]=2
+
+P(X=3) = (10 | 3) (20 | 17) / (30 | 6)
+
+P(X=3) = 0.23
+
+**5.36**
+```{r}
+coupon <- function(n){
+  i <- 0
+  j <- 1
+  a = vector(length=n)
+  a[j] <- sample(1:n,1)
+  remaining <- c(1:n)[-which(c(1:n) == a[j])]
+  repeat
+    {
+      pick <- sample(remaining,1)
+      i <- (i+1)
+      if(any(pick == a))
+        {
+        next
+        }
+      else
+        {
+          j <- (j+1)
+          a[j] <- pick
+          }
+      if(j == n)
+        {
+        break
+        }
+      }
+  return(i)
+  }
+
+```
+
+```{r}
+mean(replicate(100000,coupon(10)))
+sd(replicate(100000,coupon(10)))
+```
+
+**5.39**
+
+```{r}
+wins <- loss <- 0
+successprob <- 0.25
+series <- function(){
+  gamecount <- 0
+  while (wins < 4 && loss < 4){
+    w <- rbinom(1,1,successprob)
+    wins <- wins + w
+    loss <- loss + 1 -w
+  
+  }
+  wins + loss
+}
+
+mean(replicate(100000, series()))
+
+sd(replicate(100000, series()))
+
+```
 
 
 
