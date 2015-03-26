@@ -12,13 +12,45 @@ a. Student has not studied and guesses randomly on all ten questions. What is th
 **Notes**
 Each question is independent
 Student must get six correct in order to pass
-
 correct answer on guessing = 1/4 
-need to get six correct
+P(Y>=6)
 
-answer:
+__Answer__
+10 choose 6 * .25^6 * .75^4 = 0.016
+10 choose 7 * .25^7 * .75^3 = 0.003
+10 choose 8 * .25^8 * .75^2 = 0.0003
+10 choose 9 * .25^9 * .75^1 = 0.00002
+10 choose 10 * .25^10 * .75^0 = 0.0000009
+
+=0.0193209
+
+b. How much lower would his chance of passing be if each question had five possible answers instead of four.
+
+**Notes**
+Each question is indepdent
+need to get six correct
+correct answer on guessing = 1/5
+
+__Answer__
+10 choose 6 * .20^6 * .80^4 = 0.005
+10 choose 7 * .20^7 * .80^3 = 0.0007
+10 choose 8 * .20^8 * .80^2 = 0.00007
+10 choose 9 * .20^9 * .80^1 = 0.000004
+10 choose 10 * .20^10 * .80^0 = 0.0000001
+
+=0.0057741
+
+c. Using (a) as the probability a randomly selected unprepared student passes using part(a) method of guess. 100 student taking the quiz, how many do you expect to pass this quiz out of 100.
+
 ```{r}
-(1/4)^6
+(0.0193209)*100
 ```
 
-b. 
+d. I would not recommend that the professor take the extra work to make the number of questions five instead of four. The probability that a student will pass the quiz by guessing on each question is 0.019. This is a low probability. Though it is true that if 100 students are taking the quiz, there will be 1.9 students, which is the equalivalent of 1 student that could pass by guessing all the questions. The chances of 100 students guessing on 10 questions with four questions is low, it is more likely that the number of students guessing on every question is is less than 10. 
+
+
+2.
+
+
+
+
