@@ -1,0 +1,24 @@
+---
+title: "Assignment 8"
+author: "Ben Arancibia"
+date: "March 26, 2015"
+output: pdf_document
+---
+
+1. A professor is constructing a multiple-choice history quiz. Quiz has ten questions each with four possible answers. Minimum passing score on the quiz is 60% (6 out of 10).
+
+a. Student has not studied and guesses randomly on all ten questions. What is the probability that the student is able to pass the quiz.
+
+**Notes**
+Each question is independent
+Student must get six correct in order to pass
+
+correct answer on guessing = 1/4 
+need to get six correct
+
+answer:
+```{r}
+(1/4)^6
+```
+
+b. 
