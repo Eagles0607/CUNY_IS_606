@@ -1,0 +1,79 @@
+---
+title: 'IS 606: Statistics and Probability for Data Analytics Final Exam'
+author: "Ben Arancibia"
+date: "May 22, 2015"
+output: pdf_document
+---
+
+#Binomial or Hypergeometric
+
+1) Binomial distribution to calculate the probability that there will be three success out of ten trials, probability of success is 0.30
+
+```{r}
+dbinom(3, 10, 0.3) #dbinom(k, n, p)
+```
+
+2) Expected value and the standard deviation for binomial experiment with ten trials and P = 0.30
+
+Expected value = mean
+
+n*p = expected value
+
+```{r}
+10*.30
+```
+
+Standard deviation is sqrt of variance.
+
+```{r}
+sqrt(10*.3*(1-.3)) 
+```
+
+3) Hypergeometric distribution to calculate the probability that there will be three success out of ten trials, n = 20 with eight possible successes. 
+
+```{r}
+dhyper(3, 8, 12, 10) #dhyper(x, success, n-sucess, trials) (x,m,n,k)
+```
+
+4) Expected value and the standard deviation for a hypergeometric experiment with ten trials, n=20 with eight possible successes
+
+Expected value = n*(k/ N)
+
+```{r}
+10*(8/20)
+```
+
+Standard deviation
+
+```{r}
+sqrt(10*(8/20)*(1-(8/20))*((20-10)/(20-1)))
+```
+
+5) hypergeometric distribution to calculate the probability that there will be three success out of ten trials, N=60 with 24 possible successes.
+
+```{r}
+dhyper(3, 24, 36, 10)
+```
+
+6) Expected value and the Standard deviation for a hypergeometric experiment with ten trials, N=60 with 24 possible successes
+
+Expected value = n*(k/ N)
+```{r}
+10*(24/36)
+```
+
+Standard deviation
+
+```{r}
+sqrt(10*(24/60)*(1-(24/60))*((60-20)/(60-1)))
+```
+
+7) What population size does the binomial start to make a strong approximation for the hypergeometric distribution?
+
+The Hypergeometric(n, D, M) can be approximated by Binomial(n, D/M). The approximate works well when n < 0.1 M
+
+As long as n is less 0.1 of success trials
+
+#Conditional Probability and the Naive Bayes Classification Method
+
+
