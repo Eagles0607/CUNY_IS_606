@@ -1,4 +1,11 @@
 ---
+title: "IS 606: Statistics and Probability for Data Analytics Final Exam"
+author: "Ben Arancibia"
+date: "May 22, 2015"
+output: html_document
+---
+
+---
 title: 'IS 606: Statistics and Probability for Data Analytics Final Exam'
 author: "Ben Arancibia"
 date: "May 22, 2015"
@@ -110,5 +117,40 @@ dbinom(4, 5, 0.5) #dbinom(k, n, p)
 The probability that it is a fair coin is 15% and the probability that the coin is not fair is 85%.
 
 2)
+```{r}
+dbinom(7,8,0)
+dbinom(7,8,.25)
+dbinom(7,8,0.5)
+dbinom(7,8,.75)
+dbinom(7,8,1)
+```
 
 ![Table 2](/users/bcarancibia/CUNY_IS_606/Final/question2.png)
+
+3) What the results mean for p=0 and p=1 in the table above means that those two parameters are not possible based on the results. The result makes sense given the evidence observed. These probabilities will never change again based on the new evidence because the likelihood is 0 based on the calculated results.
+
+4) Make a new table, using your posterior probabilities from above as your new priors, and update your probabilities using this new evidence.
+
+```{r}
+dbinom(5,6,.25)
+dbinom(5,6,.50)
+dbinom(5,6,.75)
+```
+
+![Table 2](/users/bcarancibia/CUNY_IS_606/Final/question3.png)
+
+
+5)
+
+```{r}
+dbinom(12,14,0)
+dbinom(12,14,.25)
+dbinom(12,14,.50)
+dbinom(12,14,.75)
+dbinom(12,14,1)
+```
+
+![Table 5](/users/bcarancibia/CUNY_IS_606/Final/question5.png)
+
+
+The priors are different than the previous part, but the posteriors are the same. What this means is that the someone can do this calculation in an aggregate instead of running experiments. This makes sense because of how the Naive Bayes Classifer has both independence and conditional probability as part of the formula.  
